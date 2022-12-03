@@ -42,9 +42,19 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.condition.description);
 }
 
-let apiKey = "afd35t3a137aao7dadc408ba3f94b106";
-let city = "Shiraz";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+function search(city) {
+  let apiKey = "afd35t3a137aao7dadc408ba3f94b106";
 
-console.log(apiUrl);
-axios.get(apiUrl).then(displayTemperature);
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function submitButton(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+search("Shiraz");
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", submitButton);
