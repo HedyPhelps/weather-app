@@ -8,6 +8,11 @@ function formatDate(timestamp) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
+  if (hours < 6 || hours > 18) {
+    document.getElementById("app-background").style.backgroundImage =
+      "url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/057/342/original/backnight.jpg?1670576386)";
+  }
+
   let days = [
     "Sunday",
     "Monday",
