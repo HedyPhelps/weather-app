@@ -12,6 +12,12 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/styles.css" />
   </head>
@@ -34,38 +40,42 @@
               </div>
             </div>
           </form>
-          <div class="overview">
-            <h1 id="city"></h1>
-            <ul>
-              <li>Last updated: <span id="date"></span></li>
-              <li id="description"></li>
-            </ul>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <div class="d-flex weather-temperature">
-                <img
-                  src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-                  alt="Partly Cloudy"
-                  id="icon"
-                  class="float-left"
-                />
-                <div class="float-left">
-                  <strong id="temperature"></strong>
-                  <span class="units">°C </span>
-                </div>
-              </div>
-            </div>
-            <div class="col-6">
+          <div class="today-wrapper">
+            <div class="overview">
+              <h1 id="city"></h1>
               <ul>
-                <li>Precipitation: 0%</li>
-                <li>Humidity: <span id="humidity"></span>%</li>
-                <li>Wind: <span id="wind"></span> Km/H</li>
+                <li>Last updated: <span id="date"></span></li>
+                <li id="description"></li>
               </ul>
             </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="d-flex weather-temperature">
+                  <img
+                    src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                    alt="Partly Cloudy"
+                    id="icon"
+                    class="float-left"
+                  />
+                  <div class="float-left">
+                    <strong id="temperature"></strong>
+                    <span class="units">°C </span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <ul>
+                  <li>Precipitation: 0%</li>
+                  <li>Humidity: <span id="humidity"></span>%</li>
+                  <li>Wind: <span id="wind"></span> Km/H</li>
+                </ul>
+              </div>
+            </div>
           </div>
+
           <div class="weather-forecast" id="forecast"></div>
         </div>
+
         <small>
           <a href="https://github.com/HedyPhelps/weather-app" target="_blank">
             Open-source code

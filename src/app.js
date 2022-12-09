@@ -39,6 +39,7 @@ function displayForcast(response) {
       forecastHTML =
         forecastHTML +
         `  <div class="col-2">
+         <div class=col2>
                 <div class="weather-forecast-date">${formatDay(
                   forecastDay.time
                 )}</div>
@@ -49,16 +50,19 @@ function displayForcast(response) {
                   }.png"
                   alt="cloudy"
                   width="45"
+                 
                 />
                 <div class="weather-forecast-temperature">
                   <span class="weather-forecast-temperature-max"> ${Math.round(
                     forecastDay.temperature.maximum
-                  )}° </span>
+                  )}° </span> </br>
                   <span class="weather-forecast-temperature-min"> ${Math.round(
                     forecastDay.temperature.minimum
                   )}°</span>
                 </div>
               </div>
+              </div>
+               
             `;
     }
   });

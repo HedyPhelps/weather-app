@@ -5,10 +5,11 @@ body {
 
 h1 {
   color: #060d1f;
-  font-size: 24px;
+  font-family: "Oswald", sans-serif;
+  font-size: 27px;
   font-weight: 100;
   line-height: 28px;
-  margin-bottom: 0;
+  margin-bottom: 3px;
 }
 ul {
   margin: 0;
@@ -33,9 +34,31 @@ li::first-letter {
 }
 .weather-app {
   padding: 60px;
-  background: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/057/115/original/back3.jpg?1670498764");
+  background-size: cover;
   border: 1px solid #aca8ac;
   border-radius: 5px;
+}
+
+.today-wrapper {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid #aca8ac;
+  border-radius: 15px;
+}
+
+.col2 {
+  padding: 10px;
+
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid #aca8ac;
+  border-radius: 20px;
+}
+.col2 img {
+  display: block;
+  margin-left: -4px;
+  margin-right: auto;
 }
 .overview {
   margin-bottom: 30px;
